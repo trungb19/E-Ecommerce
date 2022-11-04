@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
 import 'package:shop_app/routes.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
+
+import 'theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,16 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        //??? Không hiểu VisualDensity dùng làm gì
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
       //home: SplashScreen(),
       initialRoute: SplashScreen.routeName,
       routes: routes,

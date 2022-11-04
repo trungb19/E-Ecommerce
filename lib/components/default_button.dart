@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 
 import '../size_config.dart';
 import '../constants.dart';
@@ -20,7 +21,9 @@ class DefaultButton extends StatelessWidget {
       child: FlatButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: kPrimaryColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, SignInScreen.routeName);
+        },
         child: Text(
           text,
           style: TextStyle(
